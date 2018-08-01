@@ -22,6 +22,7 @@ import { EditCatalogComponent } from './components/edit-catalog/edit-catalog.com
 import { CreateCatalogComponent } from './components/create-catalog/create-catalog.component';
 import { CreateCatalogTemplateComponent } from './components/create-catalog-template/create-catalog-template.component';
 import { UsersService } from './services/users.service';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { UsersService } from './services/users.service';
     EditCatalogComponent,
     CreateCatalogComponent,
     CreateCatalogTemplateComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

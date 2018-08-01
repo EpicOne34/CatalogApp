@@ -10,13 +10,15 @@ import { CatalogAdminComponent } from './components/catalog-admin/catalog-admin.
 import { CatalogDetailViewComponent } from './components/catalog-detail-view/catalog-detail-view.component';
 import { CreateCatalogComponent } from './components/create-catalog/create-catalog.component';
 import { CreateCatalogTemplateComponent } from './components/create-catalog-template/create-catalog-template.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent},
+  { path: '', component: LandingPageComponent },
+  {path: 'home', component: DashboardComponent},
   {path: 'admin/catalog', component: CatalogAdminComponent},
   {path: 'catalog/details', component: CatalogDetailViewComponent},
   {path: 'catalog/create', component: CreateCatalogComponent},
