@@ -1,2 +1,21 @@
 body {
   background: grey; }
+
+.pinnedListItem {
+  text-align: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas: 'item1 item2 item3';
+  grid-template-columns: repeat(3, 1fr); }
+  .pinnedListItem .item-1 {
+    grid-area: item1;
+    margin: auto;
+    border: solid .5px green; }
+  .pinnedListItem .item-2 {
+    grid-area: item2;
+    margin: auto;
+    border: solid .5px blue; }
+  .pinnedListItem .item-3 {
+    grid-area: item3;
+    margin: auto;
+    border: solid .5px grey; }

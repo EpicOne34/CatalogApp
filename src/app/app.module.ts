@@ -23,6 +23,8 @@ import { CreateCatalogComponent } from './components/create-catalog/create-catal
 import { CreateCatalogTemplateComponent } from './components/create-catalog-template/create-catalog-template.component';
 import { UsersService } from './services/users.service';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { RemindersComponent } from './components/reminders/reminders.component';
+import { CatalogFavoritesComponent } from './components/catalog-favorites/catalog-favorites.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     CreateCatalogComponent,
     CreateCatalogTemplateComponent,
     LandingPageComponent,
+    RemindersComponent,
+    CatalogFavoritesComponent,
   ],
   imports: [
     BrowserModule,
