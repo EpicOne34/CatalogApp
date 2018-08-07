@@ -1,5 +1,28 @@
+/* [Dashboard.Component] */
+/* [QuickSearch Section]... */
+.quickSearch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .quickSearch button {
+    background: white;
+    border: solid 0.5px grey;
+    border-radius: 0 15px 15px 0; }
+    .quickSearch button:hover {
+      background: yellow; }
+
+.quickSearchInput {
+  border: solid 0.5px grey;
+  border-radius: 15px;
+  max-width: 100%; }
+
+#mainNavbar {
+  width: 100%;
+  position: fixed; }
+
 body {
-  background: grey; }
+  background: white; }
 
 .pinnedListItem {
   text-align: center;

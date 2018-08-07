@@ -1,6 +1,16 @@
-<!-- <app-dynamic-navbar></app-dynamic-navbar> -->
-<div class="container dashboardContainer">
-  <div class="pinnedCatalogs mb-3">
+<div class="container">
+  <div class="quickSearch">
+    <div class="input-group input-group-sm mb-4">
+      <input type="text" class="quickSearchInput form-control text-center" placeholder="Search..." aria-label="Search" aria-describedby="quickSearchBtn">
+      <div class="input-group-append">
+        <button class="btn" type="button" id="quickSearchBtn">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pinnedCatalogs mb-4">
     <div class="pinnedListItem">
       <div class="card item-1">
         <div class="card-body">
@@ -78,6 +88,3 @@
     </small>
   </div>
 </div>
-<footer>
-  <app-main-navbar></app-main-navbar>
-</footer>

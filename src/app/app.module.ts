@@ -25,6 +25,7 @@ import { UsersService } from './services/users.service';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { RemindersComponent } from './components/reminders/reminders.component';
 import { CatalogFavoritesComponent } from './components/catalog-favorites/catalog-favorites.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CatalogFavoritesComponent } from './components/catalog-favorites/catalo
     LandingPageComponent,
     RemindersComponent,
     CatalogFavoritesComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

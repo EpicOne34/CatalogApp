@@ -1,7 +1,9 @@
 @import 'config';
+@import 'pageLayout';
+@import 'menu';
 
 body {
-  background: $primaryColor;
+  background: lighten($primaryColor, 50);
 }
 
 .pinnedListItem {
@@ -28,3 +30,5 @@ body {
     border: solid .5px grey;
   }
 }
+
+@import 'mobile';

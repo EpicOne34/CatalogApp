@@ -1,1 +1,25 @@
 $primaryColor: grey;
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 575.98px){
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 767.98px){
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (max-width: 991.98px){
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (max-width: 1199.98px){
+    @content;
+  }
+}
