@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
 
+// Page Components...
 import { CatalogAdminComponent } from './components/catalog-admin/catalog-admin.component';
 import { CatalogDetailViewComponent } from './components/catalog-detail-view/catalog-detail-view.component';
 import { CatalogFavoritesComponent } from './components/catalog-favorites/catalog-favorites.component';
@@ -16,8 +17,11 @@ import { RemindersComponent } from './components/reminders/reminders.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { UsersAdminComponent } from './components/users-admin/users-admin.component';
 
+// Framework Components...
+import { DialogComponent } from './framework/dialog/dialog.component';
+
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  {path: '', component: LandingPageComponent },
   {path: 'home', component: DashboardComponent},
   {path: 'admin/catalog', component: CatalogAdminComponent},
   {path: 'admin/users', component: UsersAdminComponent},
@@ -30,6 +34,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'reminders', component: RemindersComponent},
   {path: 'settings', component: SettingsComponent},
+  {path: 'dialog', component: DialogComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

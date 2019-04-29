@@ -1,21 +1,66 @@
-<div class="container">
-  <form id="loginForm">
-    <div class="form-group">
-      <label for="userName">Username</label>
-      <input type="text" id="userName" class="form-control text-center" placeholder="Enter Username..." required>
-    </div>
-    <div class="form-group">
-      <label for="passWord">Password</label>
-      <input type="text" id="passWord" class="form-control text-center" placeholder="Enter Password..." required>
-    </div>
-    <button id="btnLogin" class="catalogBtn" type="submit">Log In</button>
-    <input id="rememberChck" type="checkbox">
-    <label for="rememberChck" class="form-check-label">Remember Me</label>
-    <div class="container">
-      <button class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot
-        <a id="resetModal" onclick="showReset()">Password?</a>
-      </span>
-    </div>
-  </form>
+<div class="card">
+  <div class="card-header bg-primary">Login</div>
+  <div class="card-body">
+    <form #loginForm="ngForm" (ngSubmit)="loginCheck(loginForm)">
+      <div class="form-group">
+        <label for="userId">Username</label>
+        <input
+          type="text"
+          id="userId"
+          class="form-control text-center"
+          name="userId"
+          #catalogUserId="ngModel"
+          [ngClass]="{'is-invalid':catalogUserId.touched && catalogUserId.errors}"
+          [(ngModel)]="userId"
+          minlength="3"
+          placeholder="Enter User Id..."
+          required>
+
+        <div [hidden]="!catalogUserId.errors?.required" class="invalid-feedback">
+          User Id is required...
+        </div>
+        <div [hidden]="!catalogUserId.errors?.minlength" class="invalid-feedback validationMessage">
+          User Id must be at least 3 characters...
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="passWord">Password</label>
+        <input
+          type="text"
+          id="passWord"
+          class="form-control text-center"
+          name="passWord"
+          #catalogPassword="ngModel"
+          [ngClass]="{'is-invalid':catalogPassword.touched && catalogPassword.errors}"
+          [(ngModel)]="passWord"
+          minlength="6"
+          placeholder="Enter Password..."
+          required>
+
+        <div [hidden]="!catalogPassword.errors?.required" class="invalid-feedback">
+          Password is required...
+        </div>
+        <div [hidden]="!catalogPassword.errors?.minlength" class="invalid-feedback validationMessage">
+          Password must be at least 6 characters...
+        </div>
+      </div>
+
+      <input id="rememberChck" type="checkbox">
+      <label
+        for="rememberChck"
+        class="form-check-label">Remember Me
+      </label>
+      <input
+        type="submit"
+        value="Log In"
+        class="catalogBtn">
+      <div class="container">
+        <button class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot
+          <a id="resetModal" onclick="showReset()">Password?</a>
+        </span>
+      </div>
+    </form>
+  </div>
 </div>

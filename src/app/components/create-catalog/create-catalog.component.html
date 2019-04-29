@@ -1,3 +1,38 @@
-<p>
-  create-catalog works!
-</p>
+<form>
+  <div *ngIf="users?.length > 2;else selectOne" class="form-group col-md-6">
+    <select id="catalogTemplateDdl" class="custom-select">
+      <option *ngFor="let template of Templates"></option>
+    </select>
+    <button type="button" class="btn btn-sm btn-outline-primary" onclick="loadTemplateForm()">
+      Create Template
+    </button>
+  </div>
+
+  <div class="form-group col">
+    <label for="catalogName" class="col-form-label">Catalog</label>
+    <input id="catalogName" type="text" class="form-control form-control-sm" placeholder="Catalog Name">
+  </div>
+  <div class="form-group col">
+    <label for="catalogName" class="col-form-label">Catalog</label>
+    <input id="catalogName" type="text" class="form-control form-control-sm" placeholder="Catalog Name">
+  </div>
+  <div class="form-group col">
+    <label for="catalogName" class="col-form-label">Catalog</label>
+    <input id="catalogName" type="text" class="form-control form-control-sm" placeholder="Catalog Name">
+  </div>
+
+  <ng-template #selectOne>
+    <form>
+      <div class="row">
+        <div class="col">
+          <small>
+            <h6>Create a New Catalog Template...</h6>
+          </small>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-sm btn-outline-primary">Create Template</button>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+</form>

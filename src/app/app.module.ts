@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -26,6 +27,9 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { RemindersComponent } from './components/reminders/reminders.component';
 import { CatalogFavoritesComponent } from './components/catalog-favorites/catalog-favorites.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DialogComponent } from './framework/dialog/dialog.component';
+import { FormComponent } from './framework/form/form.component';
+import { ButtonComponent } from './framework/button/button.component';
 
 @NgModule({
   declarations: [
@@ -47,9 +51,13 @@ import { ProfileComponent } from './components/profile/profile.component';
     RemindersComponent,
     CatalogFavoritesComponent,
     ProfileComponent,
+    DialogComponent,
+    FormComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase,'CatalogApp'),
     AngularFirestoreModule,

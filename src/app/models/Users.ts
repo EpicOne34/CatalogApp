@@ -1,8 +1,13 @@
 export interface User{
-  id?: string;
-  userName?: string;
-  firstName?: string;
-  lastName?: string;
-  email?: string;
+  id: string;
+  userId: string;
+  firstName: string;
+  lastName: string;
+  email: string;
   password?: string;
+  active: boolean;
+  lockout: boolean;
+  validEmail: boolean;
+  userType: string;
+  createDate?: string;
 }
